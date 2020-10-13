@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color:#294600;
+
+}
+
+.clockbox{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 8px solid #000;
+    box-shadow: 2px 2px 8px 2px rgba(22, 45, 75, 0.92);
+    /* background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("./snowy.jpg"); */ 
+    background-image:linear-gradient(180deg,violet,white); 
+    background-size: cover;
+    position: relative;
+}
+
+.clockbox::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #000;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    /* z-index: 999; */
+    position: absolute;
+}
+
+
+.hand{
+
+    position: absolute;
+    bottom:50%;
+    left:50%;
+    transform: translateX(-50%) rotate(90deg);
+    transform-origin: bottom;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    
+}
+
+
+.hour{
+    width: 10px;
+    height:28%;
+    background-color: #000;
+    
+}
+
+.minute{
+    width: 7px;
+    height:38%;
+    background-color: #000;
+}
+
+
+.second{
+    width:5px;
+    height:40%;
+    background-color: #ff0000;
+    
+ 
+}
